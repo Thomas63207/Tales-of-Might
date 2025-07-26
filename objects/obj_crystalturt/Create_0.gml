@@ -1,0 +1,9 @@
+obstacle_layer = layer_tilemap_get_id("Obstacles");
+move_right = true;
+is_on_ground = false;
+vertical_speed = 0.0;
+enemy_health = 3;
+enemy_max_health = 3;
+i_frame = 0;
+turn_timer = 0;
+//instance_layer = layer_instance_get_instance("Instances");
