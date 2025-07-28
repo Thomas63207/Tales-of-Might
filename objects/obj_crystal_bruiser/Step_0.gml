@@ -1,6 +1,3 @@
-// === DEBUG — Optional visual marker ===
-draw_rectangle_color(x - 4, y, x + 4, y + 4, c_red, c_red, c_red, c_red, false);
-
 // === Death check (optional) ===
 if (enemy_health <= 0) {
     instance_destroy();
@@ -23,10 +20,10 @@ if (!is_on_ground && vertical_speed < 50) {
 if (instance_exists(obj_player)) {
     if (obj_player.x > x) {
         facing_right = true;
-        image_xscale = 1;
+        image_xscale = -1;
     } else {
         facing_right = false;
-        image_xscale = -1;
+        image_xscale = 1;
     }
 
     var dist_to_player = abs(obj_player.x - x);
@@ -34,9 +31,11 @@ if (instance_exists(obj_player)) {
     // === State Machine ===
     switch (enemy_state) {
         case EnemyState.Idle:
+			move_and_collide(0, vertical_speed, obstacle_layer);
             if (dist_to_player <= detect_range) {
                 enemy_state = EnemyState.MoveToPlayer;
                 sprite_index = spr_crystal_bruiser_walk_small;
+				image_speed = 0;
             }
             break;
 
@@ -47,7 +46,7 @@ if (instance_exists(obj_player)) {
             if (dist_to_player <= attack_range) {
                 enemy_state = EnemyState.Attacking;
                 sprite_index = spr_crystal_bruiser_slam_small;
-                image_speed = 0.2;
+                image_speed = 1;
                 image_index = 0;
             }
             break;
@@ -68,5 +67,9 @@ if (instance_exists(obj_player)) {
     }
 } else {
     // Always apply gravity even if player is gone
-    move_and_collide(0, vertical_speed, obstacle_layer);
+    //move_and_collide(0, vertical_speed, obstacle_layer);
 }
+
+show_debug_message(is_on_ground);
+show_debug_message(vertical_speed);
+show_debug_message(enemy_state);

@@ -11,7 +11,6 @@ move_speed = 2;
 vertical_speed = 0;
 is_on_ground = false;
 enemy_health = 10;
-gravity = 1;
 
 attack_range = 60;      // Distance to start attacking
 detect_range = 200;     // Distance to start pursuing
