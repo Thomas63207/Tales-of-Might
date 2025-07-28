@@ -32,10 +32,11 @@ if (instance_exists(obj_player)) {
     switch (enemy_state) {
         case EnemyState.Idle:
 			move_and_collide(0, vertical_speed, obstacle_layer);
+			image_speed = 0;
             if (dist_to_player <= detect_range) {
-                enemy_state = EnemyState.MoveToPlayer;
                 sprite_index = spr_crystal_bruiser_walk_small;
-				image_speed = 0;
+				image_speed = 1;
+				enemy_state = EnemyState.MoveToPlayer;
             }
             break;
 
@@ -49,6 +50,9 @@ if (instance_exists(obj_player)) {
                 image_speed = 1;
                 image_index = 0;
             }
+			else if (dist_to_player >= detect_range) {
+				enemy_state = EnemyState.Idle;
+			}
             break;
 
         case EnemyState.Attacking:
@@ -57,8 +61,8 @@ if (instance_exists(obj_player)) {
 
             if (image_index >= image_number - 1) {
                 if (dist_to_player > attack_range) {
+					sprite_index = spr_crystal_bruiser_walk_small;
                     enemy_state = EnemyState.MoveToPlayer;
-                    sprite_index = spr_crystal_bruiser_walk_small;
                 } else {
                     image_index = 0; // Repeat attack
                 }
@@ -70,6 +74,6 @@ if (instance_exists(obj_player)) {
     //move_and_collide(0, vertical_speed, obstacle_layer);
 }
 
-show_debug_message(is_on_ground);
-show_debug_message(vertical_speed);
+
 show_debug_message(enemy_state);
+show_debug_message(move_speed);
