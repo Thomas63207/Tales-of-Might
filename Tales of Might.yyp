@@ -62,6 +62,7 @@
     {"id":{"name":"obj_torch_yellow","path":"objects/obj_torch_yellow/obj_torch_yellow.yy",},},
     {"id":{"name":"obj_ui_controller","path":"objects/obj_ui_controller/obj_ui_controller.yy",},},
     {"id":{"name":"ps_rune","path":"particles/ps_rune/ps_rune.yy",},},
+    {"id":{"name":"ps_sparks","path":"particles/ps_sparks/ps_sparks.yy",},},
     {"id":{"name":"room_example2","path":"rooms/room_example2/room_example2.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"create_rune_line","path":"scripts/create_rune_line/create_rune_line.yy",},},
