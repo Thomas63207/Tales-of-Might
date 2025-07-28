@@ -12,7 +12,7 @@ vertical_speed = 0;
 is_on_ground = false;
 enemy_health = 10;
 
-attack_range = 150;      // Distance to start attacking
-detect_range = 600;     // Distance to start pursuing
+attack_range = 150;
+detect_range = 1000;
 
-facing_right = true;    // Used for sprite facing
+facing_right = true;

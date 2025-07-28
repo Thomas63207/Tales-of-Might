@@ -42,13 +42,14 @@ if (instance_exists(obj_player)) {
 
         case EnemyState.MoveToPlayer:
             var dir = sign(obj_player.x - x);
-            move_and_collide(dir * move_speed, vertical_speed, obstacle_layer);
+            move_and_collide(dir * move_speed, 0, obstacle_layer);
+			move_and_collide(0, vertical_speed, obstacle_layer);
 
             if (dist_to_player <= attack_range) {
-                enemy_state = EnemyState.Attacking;
                 sprite_index = spr_crystal_bruiser_slam_small;
                 image_speed = 1;
                 image_index = 0;
+				enemy_state = EnemyState.Attacking;
             }
 			else if (dist_to_player >= detect_range) {
 				enemy_state = EnemyState.Idle;
