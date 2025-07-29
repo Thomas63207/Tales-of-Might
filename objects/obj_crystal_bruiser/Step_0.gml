@@ -21,9 +21,11 @@ if (instance_exists(obj_player)) {
     if (obj_player.x > x) {
         facing_right = true;
         image_xscale = -1;
+		part_type_direction(1, 100, 180, 0, 0);
     } else {
         facing_right = false;
         image_xscale = 1;
+		part_type_direction(1, 0, 80, 0, 0);
     }
 
     var dist_to_player = abs(obj_player.x - x);
@@ -36,6 +38,7 @@ if (instance_exists(obj_player)) {
             if (dist_to_player <= detect_range) {
                 sprite_index = spr_crystal_bruiser_walk_small;
 				image_speed = 1;
+				part_emitter_interval(psys, emitter, 0, 0.2, time_source_units_seconds);
 				enemy_state = EnemyState.MoveToPlayer;
             }
             break;
@@ -44,14 +47,17 @@ if (instance_exists(obj_player)) {
             var dir = sign(obj_player.x - x);
             move_and_collide(dir * move_speed, 0, obstacle_layer);
 			move_and_collide(0, vertical_speed, obstacle_layer);
-
+			part_emitter_region(psys, emitter, x + (165 * image_xscale), x + (165 * image_xscale), y + 85, y + 85, 0, ps_distr_linear);
+			
             if (dist_to_player <= attack_range) {
                 sprite_index = spr_crystal_bruiser_slam_small;
                 image_speed = 1;
                 image_index = 0;
+				part_emitter_interval(psys, emitter, 999, 999, time_source_units_seconds);
 				enemy_state = EnemyState.Attacking;
             }
 			else if (dist_to_player >= detect_range) {
+				part_emitter_interval(psys, emitter, 999, 999, time_source_units_seconds);
 				enemy_state = EnemyState.Idle;
 			}
             break;
@@ -63,6 +69,7 @@ if (instance_exists(obj_player)) {
             if (image_index >= image_number - 1) {
                 if (dist_to_player > attack_range) {
 					sprite_index = spr_crystal_bruiser_walk_small;
+					part_emitter_interval(psys, emitter, 0, 0.2, time_source_units_seconds);
                     enemy_state = EnemyState.MoveToPlayer;
                 } else {
                     image_index = 0; // Repeat attack
@@ -75,6 +82,3 @@ if (instance_exists(obj_player)) {
     //move_and_collide(0, vertical_speed, obstacle_layer);
 }
 
-
-show_debug_message(enemy_state);
-show_debug_message(move_speed);

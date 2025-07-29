@@ -4,7 +4,6 @@ light_size = 1;
 light_alpha = 0.6;
 glow_alpha = 0.1;
 glow_color = c_blue;
-setup_done = false;
 stream_interval = irandom_range(1, 30);
 stream_timer = 0;
 
