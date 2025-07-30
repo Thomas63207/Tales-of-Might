@@ -11,8 +11,8 @@
   "name":"obj_firebolt",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Spells",
+    "path":"folders/Objects/Player/Spells.yy",
   },
   "parentObjectId":{
     "name":"obj_light_emitter",

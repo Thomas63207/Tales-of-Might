@@ -66,7 +66,10 @@ if (instance_exists(obj_player)) {
             // During attack, still apply vertical movement
             move_and_collide(0, vertical_speed, obstacle_layer);
 			
-			if (image_index == 25
+			if (round(image_index) == 25) {
+				show_debug_message("frame 25 is being recognized");
+				instance_create_layer(x - (150 * image_xscale), y + 85, "FX", obj_bruiser_hurtbox)
+			}
 
             if (image_index >= image_number - 1) {
                 if (dist_to_player > attack_range) {

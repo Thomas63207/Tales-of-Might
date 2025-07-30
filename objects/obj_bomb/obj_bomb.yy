@@ -10,8 +10,8 @@
   "name":"obj_bomb",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Spells",
+    "path":"folders/Objects/Player/Spells.yy",
   },
   "parentObjectId":null,
   "persistent":false,
