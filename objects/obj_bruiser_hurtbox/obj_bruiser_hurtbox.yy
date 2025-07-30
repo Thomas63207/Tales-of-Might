@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite37",
-    "path":"sprites/Sprite37/Sprite37.yy",
+    "name":"spr_bruiser_hurtbox",
+    "path":"sprites/spr_bruiser_hurtbox/spr_bruiser_hurtbox.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -49,8 +49,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Crystal Turtle",
+    "path":"folders/Sprites/Enemies/Crystal Turtle.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

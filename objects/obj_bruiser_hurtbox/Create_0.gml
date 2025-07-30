@@ -1,2 +1,2 @@
-lifespan = 30;
+lifespan = 3;
 damage = 3;
