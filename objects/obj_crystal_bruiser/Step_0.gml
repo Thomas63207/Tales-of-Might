@@ -68,7 +68,9 @@ if (instance_exists(obj_player)) {
 			
 			if (round(image_index) == 25) {
 				show_debug_message("frame 25 is being recognized");
-				instance_create_layer(x - (150 * image_xscale), y + 85, "FX", obj_bruiser_hurtbox)
+				instance_create_layer(x - (150 * image_xscale), y + 85, "Instances", obj_bruiser_hurtbox);
+				var shockwave = instance_create_layer(x - (150 * image_xscale), y + 100, "Instances", obj_bruiser_shockwave);
+				shockwave.dir = image_xscale;
 			}
 
             if (image_index >= image_number - 1) {

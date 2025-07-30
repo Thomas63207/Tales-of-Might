@@ -1,8 +1,8 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_bruiser_hurtbox",
-  "bboxMode":2,
-  "bbox_bottom":149,
+  "%Name":"spr_bruiser_shockwave",
+  "bboxMode":0,
+  "bbox_bottom":49,
   "bbox_left":0,
   "bbox_right":49,
   "bbox_top":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"7b6cff0b-1f48-4680-b34e-92cc2a77378c","name":"7b6cff0b-1f48-4680-b34e-92cc2a77378c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"94e5b376-8877-47f8-af30-649657ce7960","name":"94e5b376-8877-47f8-af30-649657ce7960","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":150,
+  "height":50,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"7c1f75db-7696-47a7-b90b-cd2d2b68d1d3","blendMode":0,"displayName":"default","isLocked":false,"name":"7c1f75db-7696-47a7-b90b-cd2d2b68d1d3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"45113d4b-e2d1-4fd0-bb70-db42b4b58338","blendMode":0,"displayName":"default","isLocked":false,"name":"45113d4b-e2d1-4fd0-bb70-db42b4b58338","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_bruiser_hurtbox",
+  "name":"spr_bruiser_shockwave",
   "nineSlice":null,
   "origin":7,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_bruiser_hurtbox",
+    "%Name":"spr_bruiser_shockwave",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_bruiser_hurtbox",
+    "name":"spr_bruiser_shockwave",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,14 +69,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7b6cff0b-1f48-4680-b34e-92cc2a77378c","path":"sprites/spr_bruiser_hurtbox/spr_bruiser_hurtbox.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a9767be1-0d86-4335-8158-aa5477f5ebae","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"94e5b376-8877-47f8-af30-649657ce7960","path":"sprites/spr_bruiser_shockwave/spr_bruiser_shockwave.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"da2ae03a-8e0c-4353-9707-0d8b00fcced9","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
     "xorigin":25,
-    "yorigin":150,
+    "yorigin":50,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
