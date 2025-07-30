@@ -65,6 +65,8 @@ if (instance_exists(obj_player)) {
         case EnemyState.Attacking:
             // During attack, still apply vertical movement
             move_and_collide(0, vertical_speed, obstacle_layer);
+			
+			if (image_index == 25
 
             if (image_index >= image_number - 1) {
                 if (dist_to_player > attack_range) {

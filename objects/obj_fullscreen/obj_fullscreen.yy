@@ -8,8 +8,8 @@
   "name":"obj_fullscreen",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"UI and Cam",
+    "path":"folders/Objects/UI and Cam.yy",
   },
   "parentObjectId":null,
   "persistent":false,

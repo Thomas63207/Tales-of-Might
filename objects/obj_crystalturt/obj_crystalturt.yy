@@ -9,8 +9,8 @@
   "name":"obj_crystalturt",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Crystal Turtle",
+    "path":"folders/Objects/Enemies/Crystal Turtle.yy",
   },
   "parentObjectId":{
     "name":"obj_enemy_parent",

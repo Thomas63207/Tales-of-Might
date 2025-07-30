@@ -10,8 +10,8 @@
   "name":"obj_crystal_bruiser",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Crystal Bruiser",
+    "path":"folders/Objects/Enemies/Crystal Bruiser.yy",
   },
   "parentObjectId":null,
   "persistent":false,
