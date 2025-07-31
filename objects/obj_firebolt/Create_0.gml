@@ -8,6 +8,8 @@ else
 	image_xscale = -1;
 }
 
+damage = 1;
+
 obstacle_layer = layer_tilemap_get_id("Obstacles");
 
 light_color = c_blue;

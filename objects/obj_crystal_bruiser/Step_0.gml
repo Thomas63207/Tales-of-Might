@@ -1,5 +1,5 @@
 // === Death check (optional) ===
-if (enemy_health <= 0) {
+if (hp <= 0) {
     instance_destroy();
 }
 
@@ -47,7 +47,11 @@ if (instance_exists(obj_player)) {
             var dir = sign(obj_player.x - x);
             move_and_collide(dir * move_speed, 0, obstacle_layer);
 			move_and_collide(0, vertical_speed, obstacle_layer);
-			part_emitter_region(psys, emitter, x + (165 * image_xscale), x + (165 * image_xscale), y + 85, y + 85, 0, ps_distr_linear);
+			if (part_emitter_exists(psys, emitter)) {
+				part_emitter_region(psys, emitter,
+				x + (165 * image_xscale), x + (165 * image_xscale),
+				y + 85, y + 85, 0, ps_distr_linear);
+			}
 			
             if (dist_to_player <= attack_range) {
                 sprite_index = spr_crystal_bruiser_slam_small;

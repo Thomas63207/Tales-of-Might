@@ -1,6 +1,6 @@
 // If waiting to turn, count down timer
 // Death check
-if (enemy_health <= 0)
+if (hp <= 0)
 {
 	instance_destroy();
 }
