@@ -104,7 +104,6 @@ if (is_jumping && _jump_held) {
 
 // ───── COOLDOWNS / DEATH ─────
 if (block_cd > 0) block_cd--;
-if (block_cd == 40) instance_destroy(obj_barrier);
 if (i_frames > 0) i_frames--;
 
 if (hp <= 0) {
