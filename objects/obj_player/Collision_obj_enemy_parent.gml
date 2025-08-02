@@ -18,6 +18,3 @@ if (i_frames == 0 && is_dead == false)
 		}
 	}
 }
-
-var collide = other.id
-show_debug_message(collide);
