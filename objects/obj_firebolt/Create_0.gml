@@ -16,6 +16,7 @@ enum SpellState {
 spell_state = SpellState.Flying;
 
 damage = 1;
+death_wait_time = 0;
 
 obstacle_layer = layer_tilemap_get_id("Obstacles");
 

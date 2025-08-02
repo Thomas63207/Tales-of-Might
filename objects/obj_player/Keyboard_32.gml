@@ -13,7 +13,7 @@ if (keyboard_check_pressed(vk_space)) {
 
         if (match) {
             // Spawn the projectile
-            instance_create_layer(x, y, "instances", obj_firebolt);
+            instance_create_layer(x, y, "FX", obj_firebolt);
 			mp--;
         }
     }

@@ -8,8 +8,8 @@
   "name":"obj_light_emitter",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI and Cam",
-    "path":"folders/Objects/UI and Cam.yy",
+    "name":"My Light System",
+    "path":"folders/Objects/My Light System.yy",
   },
   "parentObjectId":null,
   "persistent":false,
