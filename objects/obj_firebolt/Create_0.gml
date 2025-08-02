@@ -8,6 +8,13 @@ else
 	image_xscale = -1;
 }
 
+enum SpellState {
+	Flying,
+	Boom
+	}
+	
+spell_state = SpellState.Flying;
+
 damage = 1;
 
 obstacle_layer = layer_tilemap_get_id("Obstacles");
