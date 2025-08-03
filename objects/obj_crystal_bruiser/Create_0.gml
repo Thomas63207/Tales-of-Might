@@ -2,7 +2,8 @@
 enum EnemyState {
     Idle,
     MoveToPlayer,
-    Attacking
+    Attacking,
+	Death
 }
 
 obstacle_layer = layer_tilemap_get_id("Obstacles");

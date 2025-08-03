@@ -1,6 +1,9 @@
-// === Death check (optional) ===
+// === Death check ===
 if (hp <= 0) {
-    instance_destroy();
+	sprite_index = spr_crystal_bruiser_death_small;
+	image_speed = 1;
+	part_emitter_interval(psys, emitter, 999, 999, time_source_units_seconds);
+    enemy_state = EnemyState.Death;
 }
 
 // === Ground Check ===
@@ -13,16 +16,16 @@ if (place_meeting(x, y + 1, obstacle_layer)) {
 
 // === Apply Gravity ===
 if (!is_on_ground && vertical_speed < 50) {
-    vertical_speed += 1; // Same gravity as turtle
+    vertical_speed += 1;
 }
 
 // === Face Player ===
 if (instance_exists(obj_player)) {
-    if (obj_player.x > x) {
+    if (obj_player.x > x && hp > 0) {
         facing_right = true;
         image_xscale = -1;
 		part_type_direction(1, 100, 180, 0, 0);
-    } else {
+    } else if (hp > 0) {
         facing_right = false;
         image_xscale = 1;
 		part_type_direction(1, 0, 80, 0, 0);
@@ -86,9 +89,15 @@ if (instance_exists(obj_player)) {
                 }
             }
             break;
+			
+		case EnemyState.Death:
+			if (round(image_index) == 13) {
+				image_speed = 0;
+			}
     }
-} else {
-    // Always apply gravity even if player is gone
-    //move_and_collide(0, vertical_speed, obstacle_layer);
 }
 
+
+// === DEBUG ===
+show_debug_message(enemy_state);
+show_debug_message(image_speed);
