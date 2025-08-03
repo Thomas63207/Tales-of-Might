@@ -15,8 +15,8 @@ coyote_duration = 6;
 block_cd = 0;
 max_hp = 5;
 hp = 5;
-max_mp = 100;
-mp = 100;
+max_mp = 10;
+mp = 10;
 i_frames = 0;
 
 
