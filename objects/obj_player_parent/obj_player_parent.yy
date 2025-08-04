@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_hurtbox_parent",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_player_parent",
+  "eventList":[],
   "managed":true,
-  "name":"obj_hurtbox_parent",
+  "name":"obj_player_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Player",
+    "path":"folders/Objects/Player.yy",
   },
   "parentObjectId":null,
   "persistent":false,

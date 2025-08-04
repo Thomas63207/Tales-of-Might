@@ -15,8 +15,8 @@
     "path":"folders/Objects/Player/Spells.yy",
   },
   "parentObjectId":{
-    "name":"obj_light_emitter",
-    "path":"objects/obj_light_emitter/obj_light_emitter.yy",
+    "name":"obj_hurtbox_parent",
+    "path":"objects/obj_hurtbox_parent/obj_hurtbox_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

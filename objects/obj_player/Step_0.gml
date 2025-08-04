@@ -75,13 +75,16 @@ if (i_frames == 0 && is_dead == false)
 		
 			if (instance_exists(inst)) {
 				var dmg = inst.damage;
-				if (dmg <= hp) {
-					hp -= dmg;
+				
+				if (!is_blocking) {
+					if (dmg <= hp) {
+						hp -= dmg;
+					}
+					else {
+						hp -= hp;
+					}
+					i_frames = 50;		
 				}
-				else {
-					hp -= hp;
-				}
-				i_frames = 50
 			}
 		}
 	}

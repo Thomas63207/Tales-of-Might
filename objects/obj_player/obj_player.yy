@@ -19,8 +19,8 @@
     "path":"folders/Objects/Player.yy",
   },
   "parentObjectId":{
-    "name":"obj_light_emitter",
-    "path":"objects/obj_light_emitter/obj_light_emitter.yy",
+    "name":"obj_player_parent",
+    "path":"objects/obj_player_parent/obj_player_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

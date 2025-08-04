@@ -15,17 +15,11 @@ enum SpellState {
 	
 spell_state = SpellState.Flying;
 
+team = "player";
 damage = 1;
 death_wait_time = 0;
 
 obstacle_layer = layer_tilemap_get_id("Obstacles");
-
-light_color = c_blue;
-light_size = .5;
-light_alpha = 1;
-glow_alpha = 0.4;
-glow_color = c_orange;
-glow_size = .5;
 
 //particles
 //particles
@@ -40,3 +34,13 @@ part_type_gravity(1, 0.01, 90);
 part_type_direction(1, 150, 210, 0, 0);
 part_emitter_region(psys, emitter, x, x, y, y, 0, ps_distr_linear);
 part_emitter_stream(psys, emitter, 1, 1);
+
+function on_hit(target) {
+	sprite_index = spr_firebolt_boom_small;
+	image_index = 1;
+	death_wait_time = 35;
+	spell_state = SpellState.Boom;
+}
+
+light = instance_create_layer(x, y, "Instances", obj_firebolt_light);
+light.owner = id;

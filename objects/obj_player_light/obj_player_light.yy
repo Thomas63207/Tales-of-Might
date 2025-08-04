@@ -1,21 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_barrier",
+  "%Name":"obj_player_light",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_barrier",
+  "name":"obj_player_light",
   "overriddenProperties":[],
   "parent":{
-    "name":"Spells",
-    "path":"folders/Objects/Player/Spells.yy",
+    "name":"Player",
+    "path":"folders/Objects/Player.yy",
   },
   "parentObjectId":{
-    "name":"obj_player_parent",
-    "path":"objects/obj_player_parent/obj_player_parent.yy",
+    "name":"obj_light_emitter",
+    "path":"objects/obj_light_emitter/obj_light_emitter.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_barrier_small",
-    "path":"sprites/spr_barrier_small/spr_barrier_small.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

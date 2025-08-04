@@ -13,20 +13,13 @@ obstacle_layer = layer_tilemap_get_id("Obstacles");
 coyote_timer = 0;
 coyote_duration = 6;
 block_cd = 0;
+is_blocking = false;
 max_hp = 5;
 hp = 5;
 max_mp = 10;
 mp = 10;
 i_frames = 0;
 
-
-//Light Values
-light_color = c_white;
-light_size = 4;
-light_alpha = 1;
-glow_alpha = 0.3;
-glow_color = c_white;
-glow_size = 1;
 
 //Rune System
 is_drawing = false;

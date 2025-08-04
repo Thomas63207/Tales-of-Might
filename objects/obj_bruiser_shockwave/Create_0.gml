@@ -1,3 +1,4 @@
+team = "enemy";
 dir = 1;
 damage = 1;
 move_speed = 20;

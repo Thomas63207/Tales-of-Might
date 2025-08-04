@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_hurtbox_parent",
+  "%Name":"obj_collision_manager",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_hurtbox_parent",
+  "name":"obj_collision_manager",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
