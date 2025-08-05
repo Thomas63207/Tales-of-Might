@@ -73,19 +73,22 @@ if (instance_exists(obj_player)) {
             // During attack, still apply vertical movement
             move_and_collide(0, vertical_speed, obstacle_layer);
 			
-			if (round(image_index) == 25) {
+			if (round(image_index) == 25 && did_attack == false) {
 				instance_create_layer(x - (150 * image_xscale), y + 85, "Instances", obj_bruiser_hurtbox);
 				var shockwave = instance_create_layer(x - (150 * image_xscale), y + 100, "Instances", obj_bruiser_shockwave);
 				shockwave.dir = image_xscale;
+				did_attack = true;
 			}
 
             if (image_index >= image_number - 1) {
                 if (dist_to_player > attack_range) {
 					sprite_index = spr_crystal_bruiser_walk_small;
 					part_emitter_interval(psys, emitter, 0, 0.2, time_source_units_seconds);
+					did_attack = false;
                     enemy_state = EnemyState.MoveToPlayer;
                 } else {
                     image_index = 0; // Repeat attack
+					did_attack = false;
                 }
             }
             break;
@@ -96,8 +99,3 @@ if (instance_exists(obj_player)) {
 			}
     }
 }
-
-
-// === DEBUG ===
-show_debug_message(enemy_state);
-show_debug_message(image_speed);

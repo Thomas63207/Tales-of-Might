@@ -17,6 +17,7 @@ attack_range = 150;
 detect_range = 1000;
 facing_right = true;
 damage = 0;
+did_attack = false;
 
 //particles
 psys = part_system_create(ps_sparks);

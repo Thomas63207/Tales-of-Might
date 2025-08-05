@@ -13,8 +13,8 @@
     "path":"folders/Objects/Enemies/Crystal Bruiser.yy",
   },
   "parentObjectId":{
-    "name":"obj_enemy_parent",
-    "path":"objects/obj_enemy_parent/obj_enemy_parent.yy",
+    "name":"obj_hurtbox_parent",
+    "path":"objects/obj_hurtbox_parent/obj_hurtbox_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

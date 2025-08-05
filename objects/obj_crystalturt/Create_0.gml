@@ -1,3 +1,4 @@
+team = "enemy";
 obstacle_layer = layer_tilemap_get_id("Obstacles");
 move_right = true;
 is_on_ground = false;

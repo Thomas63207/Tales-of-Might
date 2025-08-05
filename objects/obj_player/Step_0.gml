@@ -63,33 +63,6 @@ if (place_meeting(x, y + 1, obstacle_layer) && _ymovement >= 0) {
 	if (coyote_timer > 0) coyote_timer--;
 }
 
-// ————— ENEMY COLLISIONS —————
-if (i_frames == 0 && is_dead == false)
-{
-	var list = ds_list_create();
-	var count = collision_rectangle_list(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_enemy_parent, false, false, list, false);
-	
-	if (count > 0) {
-		for (var i = 0; i <= count; i++) {
-			var inst = list[| i];
-		
-			if (instance_exists(inst)) {
-				var dmg = inst.damage;
-				
-				if (!is_blocking) {
-					if (dmg <= hp) {
-						hp -= dmg;
-					}
-					else {
-						hp -= hp;
-					}
-					i_frames = 50;		
-				}
-			}
-		}
-	}
-}
-
 
 // ───── GRAVITY ─────
 if (!is_on_ground) {

@@ -19,6 +19,7 @@
     {"name":"inst_EF9F793","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_1E301FC4","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_4C8CDB38","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_55A17965","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -41,6 +42,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_light_controller","path":"objects/obj_light_controller/obj_light_controller.yy",},"propertyId":{"name":"darkness","path":"objects/obj_light_controller/obj_light_controller.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2592.0,"y":1760.0,},
         {"$GMRInstance":"v1","%Name":"inst_1756B1FD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1756B1FD","objectId":{"name":"obj_particle_controller","path":"objects/obj_particle_controller/obj_particle_controller.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":352.0,"y":1088.0,},
+        {"$GMRInstance":"v1","%Name":"inst_55A17965","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_55A17965","objectId":{"name":"obj_collision_manager","path":"objects/obj_collision_manager/obj_collision_manager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":448.0,"y":1088.0,},
       ],"layers":[],"name":"FX","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":true,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"M","assets":[
         {"$GMRSpriteGraphic":"","%Name":"graphic_63540E3","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_63540E3","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_dirt","path":"sprites/spr_dirt/spr_dirt.yy",},"x":130.0,"y":2472.0,},

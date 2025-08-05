@@ -18,6 +18,7 @@ spell_state = SpellState.Flying;
 team = "player";
 damage = 1;
 death_wait_time = 0;
+active = true;
 
 obstacle_layer = layer_tilemap_get_id("Obstacles");
 
@@ -39,6 +40,7 @@ function on_hit(target) {
 	sprite_index = spr_firebolt_boom_small;
 	image_index = 1;
 	death_wait_time = 35;
+	active = false;
 	spell_state = SpellState.Boom;
 }
 
