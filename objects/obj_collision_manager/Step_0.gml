@@ -26,7 +26,7 @@ with (obj_hurtbox_parent) {
 
     // Apply collisions
     for (var i = 0; i < ds_list_size(target_list); i++) {
-		if (!active) break;
+		if (!active) continue;
 		
         var target = target_list[| i];
 
@@ -40,12 +40,14 @@ with (obj_hurtbox_parent) {
             continue;
         }
 
-        // i-frame check or other custom logic
+        // Player check (if barrier wasn't hit)
         if (team == "enemy" && active == true && target.i_frames <= 0) {
-            target.hp -= hurtbox.damage;
-            target.i_frames = 30;
+            target.hp = max(target.hp - hurtbox.damage, 0);
+			obj_collision_manager.player_hit = true;
+			show_debug_message("Collision manager dealing damage. Hurtbox ID: " + string(hurtbox.id));
 			on_hit(target);
         }
+		// Player's hurtboxes check (spells and whatnot)
         else if (team == "player" && active == true) {
             target.hp -= hurtbox.damage;
 			on_hit(target);
@@ -53,4 +55,10 @@ with (obj_hurtbox_parent) {
     }
 	
     ds_list_destroy(target_list);
+}
+
+if (obj_collision_manager.player_hit) {
+	show_debug_message("Adding i frames");
+	obj_player.i_frames = 30;
+	obj_collision_manager.player_hit = false;
 }
