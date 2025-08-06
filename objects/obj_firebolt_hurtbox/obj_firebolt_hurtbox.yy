@@ -1,22 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_firebolt",
+  "%Name":"obj_firebolt_hurtbox",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_firebolt",
+  "name":"obj_firebolt_hurtbox",
   "overriddenProperties":[],
   "parent":{
     "name":"Spells",
     "path":"folders/Objects/Player/Spells.yy",
   },
   "parentObjectId":{
-    "name":"obj_light_emitter",
-    "path":"objects/obj_light_emitter/obj_light_emitter.yy",
+    "name":"obj_hurtbox_parent",
+    "path":"objects/obj_hurtbox_parent/obj_hurtbox_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -36,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_firebolt_small",
-    "path":"sprites/spr_firebolt_small/spr_firebolt_small.yy",
+    "name":"spr_firebolt_hurtbox",
+    "path":"sprites/spr_firebolt_hurtbox/spr_firebolt_hurtbox.yy",
   },
   "spriteMaskId":null,
   "visible":true,

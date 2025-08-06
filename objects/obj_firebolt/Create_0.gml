@@ -15,19 +15,22 @@ enum SpellState {
 	
 spell_state = SpellState.Flying;
 
-team = "player";
-damage = 1;
 death_wait_time = 0;
-active = true;
 
 obstacle_layer = layer_tilemap_get_id("Obstacles");
 
-//particles
+// Light Values
+light_color = c_blue;
+light_size = .5;
+light_alpha = 1;
+glow_alpha = 0.4;
+glow_color = c_orange;
+glow_size = .5;
+
 //particles
 psys = part_system_create(ps_sparks);
 part_system_depth(psys, 498);
 
-// Create a new emitter within the existing particle system
 emitter = part_emitter_create(psys);
 
 part_emitter_interval(psys, emitter, 0, 0.1, time_source_units_seconds);
@@ -44,5 +47,5 @@ function on_hit(target) {
 	spell_state = SpellState.Boom;
 }
 
-light = instance_create_layer(x, y, "Instances", obj_firebolt_light);
-light.owner = id;
+hurtbox = instance_create_layer(x, y, "Instances", obj_firebolt_hurtbox);
+hurtbox.owner = id;

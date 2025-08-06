@@ -123,7 +123,7 @@ if (is_dead == false) {
 //-----------------------------------------------
 //Start of Rune Drawing System
 
-//Input Buffer
+// Input Buffer
 // Diagonals
 if (keyboard_check_pressed(vk_up) && keyboard_check(vk_right) || 
     keyboard_check_pressed(vk_right) && keyboard_check(vk_up)) {

@@ -37,8 +37,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Spells",
-    "path":"folders/Sprites/Might/Spells.yy",
+    "name":"Firebolt",
+    "path":"folders/Sprites/Might/Spells/Firebolt.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

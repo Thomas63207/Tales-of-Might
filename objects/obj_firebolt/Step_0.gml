@@ -21,10 +21,10 @@ switch (spell_state) {
 		if (round(image_index) == 13) {
 			image_speed = 0;
 		}
-		light.light_size = .5 * (death_wait_time / 60);
-		light.glow_size = .5 * (death_wait_time / 60);
-		light.glow_alpha = .4 * (death_wait_time / 60);
-		light.light_alpha = 1 * (death_wait_time / 60);
+		light_size = .5 * (death_wait_time / 60);
+		glow_size = .5 * (death_wait_time / 60);
+		glow_alpha = .4 * (death_wait_time / 60);
+		light_alpha = 1 * (death_wait_time / 60);
 		if (death_wait_time == 0) {
 			instance_destroy();
 			show_debug_message("firebolt destroyed");
