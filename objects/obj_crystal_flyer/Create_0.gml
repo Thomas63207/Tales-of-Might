@@ -8,7 +8,7 @@ enum FlyerState {
 
 obstacle_layer = layer_tilemap_get_id("Obstacles");
 enemy_state = FlyerState.Idle;
-move_speed = 2;
+move_speed = 3;
 vertical_speed = 0;
 is_on_ground = false;
 hp = 10;

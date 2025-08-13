@@ -6,6 +6,14 @@ if (hp <= 0) {
     enemy_state = FlyerState.Death;
 }
 
+// === Vertical Speed ===
+if (y < obj_player.y - 100) {
+	vertical_speed = 2;
+}
+else if (y > obj_player.y - 300) {
+	vertical_speed = -2;
+}
+
 // === Face Player ===
 if (instance_exists(obj_player)) {
     if (obj_player.x > x && hp > 0) {
