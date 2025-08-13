@@ -20,6 +20,7 @@
     {"name":"inst_1E301FC4","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_4C8CDB38","path":"rooms/Room1/Room1.yy",},
     {"name":"inst_55A17965","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_5B04D7CE","path":"rooms/Room1/Room1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -58,6 +59,7 @@
         {"$GMRInstance":"v1","%Name":"inst_EF9F793","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_EF9F793","objectId":{"name":"obj_ui_controller","path":"objects/obj_ui_controller/obj_ui_controller.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":1088.0,},
         {"$GMRInstance":"v1","%Name":"inst_1E301FC4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1E301FC4","objectId":{"name":"obj_crystal_bruiser","path":"objects/obj_crystal_bruiser/obj_crystal_bruiser.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1440.0,"y":2304.0,},
         {"$GMRInstance":"v1","%Name":"inst_4C8CDB38","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4C8CDB38","objectId":{"name":"obj_player_light","path":"objects/obj_player_light/obj_player_light.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1792.0,"y":2272.0,},
+        {"$GMRInstance":"v1","%Name":"inst_5B04D7CE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5B04D7CE","objectId":{"name":"obj_crystal_flyer","path":"objects/obj_crystal_flyer/obj_crystal_flyer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2016.0,"y":2080.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":true,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Obstacles","depth":501,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Obstacles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":135,"SerialiseWidth":240,"TileCompressedData":[
           -241,1,3,-2147483648,0,0,-55,-2147483648,1,0,-179,-2147483648,-2,1,-58,-2147483648,1,0,-179,-2147483648,

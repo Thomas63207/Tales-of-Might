@@ -1,5 +1,5 @@
 // States
-enum EnemyState {
+enum BruiserState {
     Idle,
     MoveToPlayer,
     Attacking,
@@ -7,7 +7,7 @@ enum EnemyState {
 }
 
 obstacle_layer = layer_tilemap_get_id("Obstacles");
-enemy_state = EnemyState.Idle;
+enemy_state = BruiserState.Idle;
 move_speed = 2;
 vertical_speed = 0;
 is_on_ground = false;

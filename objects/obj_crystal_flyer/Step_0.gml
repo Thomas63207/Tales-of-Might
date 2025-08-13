@@ -3,20 +3,7 @@ if (hp <= 0) {
 	sprite_index = spr_crystal_bruiser_death_small;
 	image_speed = 1;
 	part_emitter_interval(psys, emitter, 999, 999, time_source_units_seconds);
-    enemy_state = BruiserState.Death;
-}
-
-// === Ground Check ===
-if (place_meeting(x, y + 1, obstacle_layer)) {
-    is_on_ground = true;
-    vertical_speed = 0;
-} else {
-    is_on_ground = false;
-}
-
-// === Apply Gravity ===
-if (!is_on_ground && vertical_speed < 50) {
-    vertical_speed += 1;
+    enemy_state = FlyerState.Death;
 }
 
 // === Face Player ===
@@ -35,41 +22,32 @@ if (instance_exists(obj_player)) {
 
     // === State Machine ===
     switch (enemy_state) {
-        case BruiserState.Idle:
+        case FlyerState.Idle:
 			move_and_collide(0, vertical_speed, obstacle_layer);
-			image_speed = 0;
             if (dist_to_player <= detect_range) {
-                sprite_index = spr_crystal_bruiser_walk_small;
+                sprite_index = spr_crystal_flyer_fly_small;
 				image_speed = 1;
-				part_emitter_interval(psys, emitter, 0, 0.2, time_source_units_seconds);
-				enemy_state = BruiserState.MoveToPlayer;
+				enemy_state = FlyerState.MoveToPlayer;
             }
             break;
 
-        case BruiserState.MoveToPlayer:
+        case FlyerState.MoveToPlayer:
             var dir = sign(obj_player.x - x);
             move_and_collide(dir * move_speed, 0, obstacle_layer);
 			move_and_collide(0, vertical_speed, obstacle_layer);
-			if (part_emitter_exists(psys, emitter)) {
-				part_emitter_region(psys, emitter,
-				x + (165 * image_xscale), x + (165 * image_xscale),
-				y + 85, y + 85, 0, ps_distr_linear);
-			}
 			
             if (dist_to_player <= attack_range) {
-                sprite_index = spr_crystal_bruiser_slam_small;
+                sprite_index = spr_crystal_flyer_attack_small;
                 image_speed = 1;
                 image_index = 0;
-				part_emitter_interval(psys, emitter, 999, 999, time_source_units_seconds);
-				enemy_state = BruiserState.Attacking;
+				enemy_state = FlyerState.Attacking;
             }
 			else if (dist_to_player >= detect_range) {
-				part_emitter_interval(psys, emitter, 999, 999, time_source_units_seconds);
-				enemy_state = BruiserState.Idle;
+				enemy_state = FlyerState.Idle;
 			}
             break;
 
-        case BruiserState.Attacking:
+        case FlyerState.Attacking:
             // During attack, still apply vertical movement
             move_and_collide(0, vertical_speed, obstacle_layer);
 			
@@ -82,10 +60,9 @@ if (instance_exists(obj_player)) {
 
             if (image_index >= image_number - 1) {
                 if (dist_to_player > attack_range) {
-					sprite_index = spr_crystal_bruiser_walk_small;
-					part_emitter_interval(psys, emitter, 0, 0.2, time_source_units_seconds);
+					sprite_index = spr_crystal_flyer_fly_small;
 					did_attack = false;
-                    enemy_state = BruiserState.MoveToPlayer;
+                    enemy_state = FlyerState.MoveToPlayer;
                 } else {
                     image_index = 0; // Repeat attack
 					did_attack = false;
@@ -93,7 +70,7 @@ if (instance_exists(obj_player)) {
             }
             break;
 			
-		case BruiserState.Death:
+		case FlyerState.Death:
 			if (round(image_index) == 13) {
 				image_speed = 0;
 			}

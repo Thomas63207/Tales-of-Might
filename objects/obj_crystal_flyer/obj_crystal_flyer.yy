@@ -1,7 +1,10 @@
 {
   "$GMObject":"",
   "%Name":"obj_crystal_flyer",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_crystal_flyer",
   "overriddenProperties":[],
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_crystal_flyer_fly_small",
+    "path":"sprites/spr_crystal_flyer_fly_small/spr_crystal_flyer_fly_small.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
