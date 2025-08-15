@@ -64,6 +64,7 @@ if (instance_exists(obj_player)) {
 				attack_timer = 60;
 				image_speed = 0;
 				did_attack = true;
+				var beam = instance_create_layer(x, y, "FX", obj_crystal_flyer_beam);
 			}
 			
 			if (attack_timer > 0 && did_attack == true) {
