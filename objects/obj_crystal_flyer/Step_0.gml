@@ -56,26 +56,31 @@ if (instance_exists(obj_player)) {
             break;
 
         case FlyerState.Attacking:
-            // During attack, still apply vertical movement
-            move_and_collide(0, vertical_speed, obstacle_layer);
 			
-			if (round(image_index) == 25 && did_attack == false) {
+			if (round(image_index) == 26 && did_attack == false) {
 				instance_create_layer(x - (150 * image_xscale), y + 85, "Instances", obj_bruiser_hurtbox);
 				var shockwave = instance_create_layer(x - (150 * image_xscale), y + 100, "Instances", obj_bruiser_shockwave);
 				shockwave.dir = image_xscale;
+				attack_timer = 60;
+				image_speed = 0;
 				did_attack = true;
 			}
-
-            if (image_index >= image_number - 1) {
-                if (dist_to_player > attack_range) {
+			
+			if (attack_timer > 0 && did_attack == true) {
+				attack_timer--;
+			}
+			else if (did_attack == true) {
+				if (dist_to_player > attack_range) {
+					image_speed = 1;
 					sprite_index = spr_crystal_flyer_fly_small;
 					did_attack = false;
                     enemy_state = FlyerState.MoveToPlayer;
                 } else {
+					image_speed = 1;
                     image_index = 0; // Repeat attack
 					did_attack = false;
                 }
-            }
+			}
             break;
 			
 		case FlyerState.Death:

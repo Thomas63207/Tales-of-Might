@@ -11,6 +11,7 @@ enemy_state = FlyerState.Idle;
 move_speed = 3;
 vertical_speed = 0;
 is_on_ground = false;
+attack_timer = 0;
 hp = 10;
 max_hp = 10;
 attack_range = 150;
